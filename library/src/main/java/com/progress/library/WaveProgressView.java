@@ -18,7 +18,7 @@ public class WaveProgressView extends View {
     private int radius = 30;
     private float[] circlePos;
     private ValueAnimator[] animators;
-    private boolean isStarted;
+    private boolean isStarted, isRunning;
     private float centerY;
     private Paint[] fillPaint;
     private int circleCount;
@@ -103,24 +103,30 @@ public class WaveProgressView extends View {
             canvas.drawCircle(centerX, circlePos[i] == 0 ? centerY : circlePos[i], radius, fillPaint[i]);
             centerX += widthPerCircle;
         }
+
+        if (isStarted && !isRunning) {
+            startLoadingAnimation();
+        }
     }
 
     public void start() {
         if (!isStarted) {
             isStarted = true;
-            startLoadingAnimation();
+            invalidate();
         }
     }
 
     public void stop() {
         if (isStarted) {
             isStarted = false;
+            isRunning = false;
             stopLoadingAnimation();
         }
     }
 
     private void startLoadingAnimation() {
         initAnimators();
+        isRunning = true;
         animators[0].start();
     }
 
@@ -131,6 +137,10 @@ public class WaveProgressView extends View {
         }
 
         invalidate();
+    }
+
+    public boolean isRunning() {
+        return isRunning;
     }
 
     private void initAnimators() {
