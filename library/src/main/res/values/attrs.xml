@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WaveLoadingView">
+        <attr name="radius" format="dimension" />
+        <attr name="circleCount" format="integer" />
+        <attr name="colors" format="reference" />
+        <attr name="waveHeight" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

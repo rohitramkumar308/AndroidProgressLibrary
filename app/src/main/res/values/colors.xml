@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="green">#3cba54</color>
+    <color name="yellow">#f4c20d</color>
+    <color name="red">#db3236</color>
+    <color name="blue">#4885ed</color>
+
+    <array name="circleColors">
+        <item>@color/red</item>
+        <item>@color/green</item>
+        <item>@color/yellow</item>
+        <item>@color/blue</item>
+    </array>
+
+</resources>
