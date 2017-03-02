@@ -1,10 +1,9 @@
 # AndroidProgressLibrary
 A library of custom progress views.
 
-##Wave Progress View
-A wave like custom progress view.
+##Wave & Linear Progress View
 
-![](https://github.com/rohitramkumar308/AndroidProgressLibrary/blob/master/waveProgressView.gif)
+![](https://github.com/rohitramkumar308/AndroidProgressLibrary/blob/master/progress_library.gif)
 
 Customizations
 ```
@@ -23,3 +22,5 @@ circleCount  | Number of circles.              | 4           |
 colors       | Array of colors for each circle.| Color.Black |
 waveHeight   | Max. height a circle can move.  | 160 px      |
 
+
+Note: All the above properties(except "waveHeight") will work for both the progress views.
