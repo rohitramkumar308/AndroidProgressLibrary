@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,15 +13,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:visibility="gone"
         android:text="animate" />
 
     <com.progress.library.WaveProgressView
         android:id="@+id/loadingView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
         app:circleCount="4"
         app:colors="@array/circleColors"
         app:radius="12dp"
         app:waveHeight="40dp" />
+
+
+    <com.progress.library.LinearProgressView
+        android:id="@+id/linearProgressView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        app:circleCount="4"
+        app:colors="@array/circleColors"
+        app:radius="12dp" />
 </RelativeLayout>

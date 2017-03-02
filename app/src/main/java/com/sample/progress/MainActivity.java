@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.progress.library.LinearProgressView;
 import com.progress.library.WaveProgressView;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,14 +18,18 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.animate);
         final WaveProgressView loadingView = (WaveProgressView) findViewById(R.id.loadingView);
 
+        final LinearProgressView linearProgressView = (LinearProgressView) findViewById(R.id.linearProgressView);
+        linearProgressView.start();
+        loadingView.start();
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startLoading = !startLoading;
                 if (startLoading) {
-                    loadingView.start();
+                    linearProgressView.start();
                 } else {
-                    loadingView.stop();
+                    linearProgressView.stop();
                 }
             }
         });
