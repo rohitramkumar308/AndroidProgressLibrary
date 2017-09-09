@@ -24,3 +24,11 @@ waveHeight   | Max. height a circle can move.  | 160 px      |
 
 
 Note: All the above properties(except "waveHeight") will work for both the progress views.
+
+build.gradle:
+
+```
+dependencies {
+	        compile 'com.github.rohitramkumar308:AndroidProgressLibrary:-SNAPSHOT'
+	}
+```
